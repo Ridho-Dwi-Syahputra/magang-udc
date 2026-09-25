@@ -1,0 +1,5 @@
+$kind: collection
+description: Koleksi lengkap endpoint Inventaris API. Jalankan Login dulu, tokennya otomatis kesimpen ke variable {{token}} lewat script di tab Tests.
+variables:
+  base_url: http://127.0.0.1:8000/api
+  token: ""

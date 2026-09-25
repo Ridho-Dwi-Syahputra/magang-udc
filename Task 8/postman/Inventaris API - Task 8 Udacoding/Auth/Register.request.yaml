@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{base_url}}/register"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Ridho Dwi",
+      "email": "ridho@inventaris.test",
+      "password": "rahasia123",
+      "password_confirmation": "rahasia123"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      const res = pm.response.json();
+      if (res.token) pm.collectionVariables.set('token', res.token);
+      pm.test('status 201', () => pm.response.to.have.status(201));
+    language: text/javascript
+order: 1000

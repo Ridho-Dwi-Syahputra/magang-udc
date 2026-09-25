@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/items/1"
+method: PUT
+headers:
+  Accept: application/json
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: text
+  content: |-
+    {
+      "stock": 50
+    }
+order: 5000

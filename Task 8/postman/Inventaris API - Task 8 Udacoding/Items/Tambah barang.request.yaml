@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{base_url}}/items"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: text
+  content: |-
+    {
+      "category_id": 1,
+      "name": "Kecap Manis 600ml",
+      "sku": "SMB-008",
+      "stock": 24,
+      "price": 22000
+    }
+order: 4000

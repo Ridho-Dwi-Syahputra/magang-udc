@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{base_url}}/categories"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: text
+  content: |-
+    {
+      "name": "Alat Tulis",
+      "description": "Buku, pulpen, dan perlengkapan kantor."
+    }
+order: 3000

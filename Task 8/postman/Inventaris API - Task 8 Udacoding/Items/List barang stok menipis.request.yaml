@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{base_url}}/items?low_stock=1"
+method: GET
+headers:
+  Accept: application/json
+  Authorization: Bearer {{token}}
+queryParams:
+  low_stock: "1"
+order: 2000

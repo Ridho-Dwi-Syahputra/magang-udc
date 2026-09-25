@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{base_url}}/items?q=beras"
+method: GET
+headers:
+  Accept: application/json
+  Authorization: Bearer {{token}}
+queryParams:
+  q: beras
+order: 3000
