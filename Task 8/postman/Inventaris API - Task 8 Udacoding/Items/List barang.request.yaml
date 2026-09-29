@@ -1,9 +1,0 @@
-$kind: http-request
-url: "{{base_url}}/items?per_page=15"
-method: GET
-headers:
-  Accept: application/json
-  Authorization: Bearer {{token}}
-queryParams:
-  per_page: "15"
-order: 1000
