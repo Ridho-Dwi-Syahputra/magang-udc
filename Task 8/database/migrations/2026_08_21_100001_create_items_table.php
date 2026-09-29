@@ -9,11 +9,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('items', function (Blueprint $table) {
-            $table->string('id', 16)->primary();
+            // Sama kayak categories: auto-increment biasa, bukan random string.
+            $table->id();
 
             // restrictOnDelete, bukan cascade. Kategori yang masih dipakai barang
             // nggak boleh dihapus begitu aja, nanti stoknya ikut hilang tanpa sadar.
-            $table->string('category_id', 16);
+            $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->restrictOnDelete();
 
             $table->string('name');

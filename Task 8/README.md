@@ -141,6 +141,8 @@ Pesan error login sengaja disamain buat "email nggak ada" dan "password salah". 
 
 CORS dibatasi ke `http://localhost:5173` lewat [config/cors.php](config/cors.php), yang jadi alamat dev server React di Task 9. Bintang sengaja nggak dipakai.
 
+ID user pakai string random 16 karakter, biar nggak ketebak urutannya buat akun login. ID category sama item pakai auto-increment biasa -- keduanya nggak butuh ID yang susah ditebak, dan integer lebih enak dipakai di query/URL.
+
 ---
 
 Ridho Dwi Syahputra, Web Developer Intern Udacoding Batch 21
